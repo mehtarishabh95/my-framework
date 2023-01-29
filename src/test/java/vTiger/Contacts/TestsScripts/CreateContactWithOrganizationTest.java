@@ -72,6 +72,8 @@ public class CreateContactWithOrganizationTest extends BaseClass {
 		Assert.assertTrue(header.contains(LASTNAME));
 		System.out.println("====cONTACT CREATED SUCCESSFULLY====");
 		
+		System.out.println("Poll SCM testing");
+		
 		
 	
 }}
