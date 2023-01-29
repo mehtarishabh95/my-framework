@@ -35,6 +35,7 @@ public class ListenersImplimentationClass implements ITestListener
 		 test.log(Status.PASS, "Test Script Passed-"+methodName);
 	}
 
+	/*
 	public void onTestFailure(ITestResult result)
 	{
 		JavaUtility jUtil=new JavaUtility();
@@ -51,13 +52,68 @@ public class ListenersImplimentationClass implements ITestListener
 			test.addScreenCaptureFromPath(path); //it will atach screenshot to the path
 			/* kuki screenshot report me attach krna h pr jvm to dot(.) ka mtlb janta h pr extent
 			 * report external tool h isliye ki wo path ko shi s smjhe uske liye path likha
-			 */
+			 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		 
+	}*/
+	
+	//wo jenkins me extent reports me screenshots ni aa re to y change kiya
+	
+	public void onTestFailure(ITestResult result) {
+		WebDriverUtility wUtil = new WebDriverUtility();
+		JavaUtility jUtil = new JavaUtility();
+		PropertyFileUtility pUtil = new PropertyFileUtility();
+		String environment = null;
+		try {
+			environment = pUtil.readDataFromPropertyFile("server");
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		// TODO Auto-generated method stub
+		String methodName = result.getMethod().getMethodName();
+		test.log(Status.FAIL, "Test Script failed - " + methodName);
+		test.log(Status.FAIL, result.getThrowable());
+
+		String screenshotName = methodName + "-" + jUtil.getSystemDateInFormat();
+		try {
+
+			if (environment.equalsIgnoreCase("local")) {
+				/*
+				 * Captures screenshot in 'Screenshots' folder and attaches it to extent report
+				 * when executed on local system
+				 */
+				String path = wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
+				test.addScreenCaptureFromPath(path);
+			} else if (environment.equalsIgnoreCase("remote")) {
+
+				/* Creates screenshot in 'Screenshots' folder of project */
+				wUtil.takeScreenshot(BaseClass.sdriver, screenshotName);
+
+				/*
+				 * Extracts name of jenkins job since System.getProperty("user.dir") when
+				 * executing from Jenkins returns local directory path like
+				 * 'C:\ProgramData\Jenkins\.jenkins\workspace\WCSM23-SmokeSuite'
+				 */
+				String jenkinsJobName = System.getProperty("user.dir")
+						.substring(System.getProperty("user.dir").lastIndexOf("\\") + 1);
+
+				/* Creates path to captured screenshot in current jenkins job's workspace */
+				String pathToScreenshotInJob = "/job/" + jenkinsJobName + "/ws/Screenshots/" + screenshotName + ".png";
+
+				/* Attaches screenshot captured from Jenkins job's workspace to the extent report*/
+				test.addScreenCaptureFromPath(pathToScreenshotInJob);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
+	
 
 	public void onTestSkipped(ITestResult result) 
 	{
