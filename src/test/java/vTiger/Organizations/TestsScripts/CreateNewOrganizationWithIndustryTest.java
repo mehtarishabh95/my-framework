@@ -32,7 +32,7 @@ public class CreateNewOrganizationWithIndustryTest extends BaseClass
 		//step2 read all the required data
 		//from property file
 		//from excel
-		String ORGNAME = eUtil.readDataFromExcel("Organizations", 4, 2)+jUtil.getRandomNumber();
+		String ORGNAME = eUtil.readDataFromExcel("Organizations", 4, 2)+jUtil.getRandomNumber()+jUtil.getRandomString(3);
 		String INDUSTRY = eUtil.readDataFromExcel("Organizations", 4, 3);
 		//step3 launch browser
 	
@@ -57,7 +57,7 @@ public class CreateNewOrganizationWithIndustryTest extends BaseClass
 		OrganizationInfoPage oiP=new OrganizationInfoPage(driver);
 		String OrgHeader = oiP.getOrgHeader();
 		Assert.assertTrue(OrgHeader.contains(ORGNAME));
-		System.out.println("====FINAL PASS====");
+		System.out.println("====NewOrganizationWithIndustry PASS====");
 		//step9 logout of app
 		
 		
