@@ -6,7 +6,7 @@ public class ReadDataFrom {
 	@Test
 	public void readData()
 	{
-		String BROWSER = System.getProperty("Browser"); // it will accept run time parameters
+		String BROWSER = System.getProperty("browser"); // it will accept run time parameters
 		System.out.println(BROWSER);
 		
 		String URL = System.getProperty("url");
