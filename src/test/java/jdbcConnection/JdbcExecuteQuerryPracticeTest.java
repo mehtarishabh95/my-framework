@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import com.mysql.cj.jdbc.Driver;
 
-public class JdbcPracticeTest 
+public class JdbcExecuteQuerryPracticeTest 
 {
 	@Test
 	public void sampleJdbc() throws SQLException 

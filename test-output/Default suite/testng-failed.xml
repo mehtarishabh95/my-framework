@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jdbcConnection.JdbcPracticeTest">
+      <class name="jdbcConnection.JdbcExecuteUpdatePracticeTest">
         <methods>
-          <include name="sampleJdbc"/>
+          <include name="jdbcUpdate"/>
         </methods>
-      </class> <!-- jdbcConnection.JdbcPracticeTest -->
+      </class> <!-- jdbcConnection.JdbcExecuteUpdatePracticeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

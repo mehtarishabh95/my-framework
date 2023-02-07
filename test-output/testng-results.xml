@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-07T17:37:57 IST" name="Default suite" finished-at="2023-02-07T17:37:58 IST" duration-ms="1056">
+  <suite started-at="2023-02-07T18:20:16 IST" name="Default suite" finished-at="2023-02-07T18:20:16 IST" duration-ms="963">
     <groups>
     </groups>
-    <test started-at="2023-02-07T17:37:57 IST" name="Default test" finished-at="2023-02-07T17:37:58 IST" duration-ms="1056">
-      <class name="jdbcConnection.JdbcPracticeTest">
-        <test-method signature="sampleJdbc()[pri:0, instance:jdbcConnection.JdbcPracticeTest@dbf57b3]" started-at="2023-02-07T17:37:57 IST" name="sampleJdbc" finished-at="2023-02-07T17:37:58 IST" duration-ms="958" status="PASS">
+    <test started-at="2023-02-07T18:20:16 IST" name="Default test" finished-at="2023-02-07T18:20:16 IST" duration-ms="963">
+      <class name="jdbcConnection.JdbcExecuteUpdatePracticeTest">
+        <test-method signature="jdbcUpdate()[pri:0, instance:jdbcConnection.JdbcExecuteUpdatePracticeTest@dbf57b3]" started-at="2023-02-07T18:20:16 IST" name="jdbcUpdate" finished-at="2023-02-07T18:20:16 IST" duration-ms="901" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sampleJdbc -->
-      </class> <!-- jdbcConnection.JdbcPracticeTest -->
+        </test-method> <!-- jdbcUpdate -->
+      </class> <!-- jdbcConnection.JdbcExecuteUpdatePracticeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
