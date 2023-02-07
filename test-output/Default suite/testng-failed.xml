@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vTiger.Practice.RetryAnalyserPractice">
+      <class name="jdbcConnection.JdbcPracticeTest">
         <methods>
-          <include name="retryTest"/>
+          <include name="sampleJdbc"/>
         </methods>
-      </class> <!-- vTiger.Practice.RetryAnalyserPractice -->
+      </class> <!-- jdbcConnection.JdbcPracticeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

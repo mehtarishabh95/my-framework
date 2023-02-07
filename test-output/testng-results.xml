@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-31T13:59:27 IST" name="Default suite" finished-at="2023-01-31T13:59:27 IST" duration-ms="163">
+  <suite started-at="2023-02-07T17:37:57 IST" name="Default suite" finished-at="2023-02-07T17:37:58 IST" duration-ms="1056">
     <groups>
     </groups>
-    <test started-at="2023-01-31T13:59:27 IST" name="Default test" finished-at="2023-01-31T13:59:27 IST" duration-ms="163">
-      <class name="vTiger.Practice.ReadDataFrom">
-        <test-method signature="readData()[pri:0, instance:vTiger.Practice.ReadDataFrom@6e171cd7]" started-at="2023-01-31T13:59:27 IST" name="readData" finished-at="2023-01-31T13:59:27 IST" duration-ms="24" status="PASS">
+    <test started-at="2023-02-07T17:37:57 IST" name="Default test" finished-at="2023-02-07T17:37:58 IST" duration-ms="1056">
+      <class name="jdbcConnection.JdbcPracticeTest">
+        <test-method signature="sampleJdbc()[pri:0, instance:jdbcConnection.JdbcPracticeTest@dbf57b3]" started-at="2023-02-07T17:37:57 IST" name="sampleJdbc" finished-at="2023-02-07T17:37:58 IST" duration-ms="958" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- readData -->
-      </class> <!-- vTiger.Practice.ReadDataFrom -->
+        </test-method> <!-- sampleJdbc -->
+      </class> <!-- jdbcConnection.JdbcPracticeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
