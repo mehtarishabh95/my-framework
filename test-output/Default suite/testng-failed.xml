@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jdbcConnection.JdbcExecuteUpdatePracticeTest">
+      <class name="vTiger.Practice.DebuggingPractice">
         <methods>
-          <include name="jdbcUpdate"/>
+          <include name="debugging"/>
         </methods>
-      </class> <!-- jdbcConnection.JdbcExecuteUpdatePracticeTest -->
+      </class> <!-- vTiger.Practice.DebuggingPractice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

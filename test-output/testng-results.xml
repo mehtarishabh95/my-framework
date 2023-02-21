@@ -1,17 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-07T18:20:16 IST" name="Default suite" finished-at="2023-02-07T18:20:16 IST" duration-ms="963">
+  <suite started-at="2023-02-21T13:56:22 IST" name="Suite" finished-at="2023-02-21T14:00:34 IST" duration-ms="252523">
     <groups>
+      <group name="RegressionSuite">
+        <method signature="CreateNewOrganizationWithIndustryTest.createNewOrgWithIndTest()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest@6adbc9d]" name="createNewOrgWithIndTest" class="vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest"/>
+      </group> <!-- RegressionSuite -->
+      <group name="SmokeSuite">
+        <method signature="CreateNewOrganizationWithIndustryTest.createNewOrgWithIndTest()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest@6adbc9d]" name="createNewOrgWithIndTest" class="vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest"/>
+      </group> <!-- SmokeSuite -->
     </groups>
-    <test started-at="2023-02-07T18:20:16 IST" name="Default test" finished-at="2023-02-07T18:20:16 IST" duration-ms="963">
-      <class name="jdbcConnection.JdbcExecuteUpdatePracticeTest">
-        <test-method signature="jdbcUpdate()[pri:0, instance:jdbcConnection.JdbcExecuteUpdatePracticeTest@dbf57b3]" started-at="2023-02-07T18:20:16 IST" name="jdbcUpdate" finished-at="2023-02-07T18:20:16 IST" duration-ms="901" status="PASS">
+    <test started-at="2023-02-21T13:56:22 IST" name="Test=Runner 1" finished-at="2023-02-21T14:00:34 IST" duration-ms="252522">
+      <class name="vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest">
+        <test-method is-config="true" signature="bcConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest@6adbc9d]" started-at="2023-02-21T13:56:23 IST" name="bcConfig" finished-at="2023-02-21T13:58:07 IST" duration-ms="103778" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jdbcUpdate -->
-      </class> <!-- jdbcConnection.JdbcExecuteUpdatePracticeTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- bcConfig -->
+        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest@6adbc9d]" started-at="2023-02-21T13:58:07 IST" name="bmConfig" finished-at="2023-02-21T13:58:51 IST" duration-ms="43963" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmConfig -->
+        <test-method signature="createNewOrgWithIndTest()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest@6adbc9d]" started-at="2023-02-21T13:58:51 IST" name="createNewOrgWithIndTest" finished-at="2023-02-21T14:00:28 IST" duration-ms="96888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewOrgWithIndTest -->
+        <test-method is-config="true" signature="amConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest@6adbc9d]" started-at="2023-02-21T14:00:28 IST" name="amConfig" finished-at="2023-02-21T14:00:33 IST" duration-ms="5041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amConfig -->
+        <test-method is-config="true" signature="acConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest@6adbc9d]" started-at="2023-02-21T14:00:33 IST" name="acConfig" finished-at="2023-02-21T14:00:34 IST" duration-ms="1803" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acConfig -->
+      </class> <!-- vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest -->
+    </test> <!-- Test=Runner 1 -->
+    <test started-at="2023-02-21T13:56:22 IST" name="Test-Runner 2" finished-at="2023-02-21T14:00:34 IST" duration-ms="251850">
+      <class name="vTiger.Organizations.TestsScripts.CreateOrganizationWithDDTAndGuTest">
+        <test-method is-config="true" signature="bsConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateOrganizationWithDDTAndGuTest@71d44a3]" started-at="2023-02-21T13:56:22 IST" name="bsConfig" finished-at="2023-02-21T13:56:22 IST" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bsConfig -->
+        <test-method is-config="true" signature="bcConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateOrganizationWithDDTAndGuTest@71d44a3]" started-at="2023-02-21T13:56:23 IST" name="bcConfig" finished-at="2023-02-21T13:58:07 IST" duration-ms="103687" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bcConfig -->
+        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateOrganizationWithDDTAndGuTest@71d44a3]" started-at="2023-02-21T13:58:07 IST" name="bmConfig" finished-at="2023-02-21T13:59:01 IST" duration-ms="54001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmConfig -->
+        <test-method signature="createOrgWithDDtAndGuTest()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateOrganizationWithDDTAndGuTest@71d44a3]" started-at="2023-02-21T13:59:01 IST" name="createOrgWithDDtAndGuTest" finished-at="2023-02-21T14:00:28 IST" duration-ms="86914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrgWithDDtAndGuTest -->
+        <test-method is-config="true" signature="amConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateOrganizationWithDDTAndGuTest@71d44a3]" started-at="2023-02-21T14:00:28 IST" name="amConfig" finished-at="2023-02-21T14:00:33 IST" duration-ms="5047" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amConfig -->
+        <test-method is-config="true" signature="acConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateOrganizationWithDDTAndGuTest@71d44a3]" started-at="2023-02-21T14:00:33 IST" name="acConfig" finished-at="2023-02-21T14:00:34 IST" duration-ms="1128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acConfig -->
+        <test-method is-config="true" signature="asConfig()[pri:0, instance:vTiger.Organizations.TestsScripts.CreateOrganizationWithDDTAndGuTest@71d44a3]" started-at="2023-02-21T14:00:35 IST" name="asConfig" finished-at="2023-02-21T14:00:35 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- asConfig -->
+      </class> <!-- vTiger.Organizations.TestsScripts.CreateOrganizationWithDDTAndGuTest -->
+    </test> <!-- Test-Runner 2 -->
+  </suite> <!-- Suite -->
 </testng-results>

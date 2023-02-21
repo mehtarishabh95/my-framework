@@ -1,30 +1,22 @@
-package vTiger.Practice;
+package handelingCalender;
 
 import java.time.Duration;
 import java.util.Date;
-
-import javax.xml.xpath.XPath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class MakeMyTripPractice 
+public class JustLearnHowToDo 
 {
-	public WebDriver driver;
+	public WebDriver driver = new ChromeDriver();
+	@BeforeTest
 	
-	
-	@Test
-	public void selectAnyDateInDOM() throws InterruptedException
-	//month ki koi bhi date lelo
+	public void goToMakeMyTrip() throws InterruptedException
 	{
-System.out.println("start");
-		
-		driver=new ChromeDriver();
 	
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -36,15 +28,19 @@ System.out.println("start");
 	*/
 	driver.findElement(By.xpath("//span[@class='ic_circularclose_grey']")).click();
 	
-		
-		
-	System.out.println("1 start");
-	driver.findElement(By.xpath("//span[text()='From']")).click();
+	driver.switchTo().defaultContent();	
+	
+	}
+	@Test
+	public void selectAnyDateInDOM() throws InterruptedException
+	//month ki koi bhi date lelo
+	{
+	
+	
 	WebElement from = driver.findElement(By.xpath("//input[@autocomplete='off']"));
 	from.sendKeys("mumbai");
 	driver.findElement(By.xpath("//p[text()='Mumbai, India']")).click();
 	
-	driver.findElement(By.xpath("//span[text()='To']")).click();
 	WebElement to = driver.findElement(By.xpath("//input[@aria-controls='react-autowhatever-1']"));
 	to.sendKeys("chennai");
 	driver.findElement(By.xpath("//p[text()='Chennai, India']")).click();
@@ -55,7 +51,6 @@ System.out.println("start");
 	Thread.sleep(5000); //dkh lo kaam bhi kiya ya nhi
 	
 	driver.close();
-	System.out.println("1 pass");
 	
 	}
 	
@@ -63,23 +58,6 @@ System.out.println("start");
 	public void selectCurrentDateOfMonth() throws InterruptedException
 	//system date capture krni pdegi
 	{
-System.out.println("start");
-		
-		driver=new ChromeDriver();
-	
-	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	driver.get("https://www.makemytrip.com/");
-	
-	Thread.sleep(1000);
-	/*Actions act = new Actions(driver);//jo ads aa re h unhe htane k liye
-	act.moveByOffset(10, 10).click().perform();//day 41 dkh lo
-	*/
-	driver.findElement(By.xpath("//span[@class='ic_circularclose_grey']")).click();
-	
-		
-		
-		System.out.println("2 start");
 		//to capture system date
 		Date d=new Date();
 		String dArr = d.toString();
@@ -95,14 +73,11 @@ System.out.println("start");
 		
 		String travelDate = day+" "+month+" "+date+" "+year;
 		
-		System.out.println("2 continue");
-		
-		driver.findElement(By.xpath("//span[text()='From']")).click();	
+			
 		WebElement from = driver.findElement(By.xpath("//input[@autocomplete='off']"));
 		from.sendKeys("mumbai");
 		driver.findElement(By.xpath("//p[text()='Mumbai, India']")).click();
 		
-		driver.findElement(By.xpath("//span[text()='To']")).click();
 		WebElement to = driver.findElement(By.xpath("//input[@aria-controls='react-autowhatever-1']"));
 		to.sendKeys("chennai");
 		driver.findElement(By.xpath("//p[text()='Chennai, India']")).click();
@@ -114,35 +89,16 @@ System.out.println("start");
 		driver.findElement(By.xpath("//div[@aria-label='"+travelDate+"']")).click();
 		Thread.sleep(5000); //dkh lo kaam bhi kiya ya nhi
 		driver.close();
-		System.out.println("2 passed");
 		}
 	
 		@Test
-		public void selectFutureDate() throws InterruptedException
+		public void selectFutureDate()
 		{
-			System.out.println("start");
 			
-			driver=new ChromeDriver();
-		
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://www.makemytrip.com/");
-		
-		Thread.sleep(1000);
-		/*Actions act = new Actions(driver);//jo ads aa re h unhe htane k liye
-		act.moveByOffset(10, 10).click().perform();//day 41 dkh lo
-		*/
-		driver.findElement(By.xpath("//span[@class='ic_circularclose_grey']")).click();
-		
-			
-			
-			
-			driver.findElement(By.xpath("//span[text()='From']")).click();
 			WebElement from = driver.findElement(By.xpath("//input[@autocomplete='off']"));
 			from.sendKeys("mumbai");
 			driver.findElement(By.xpath("//p[text()='Mumbai, India']")).click();
 			
-			driver.findElement(By.xpath("//span[text()='To']")).click();
 			WebElement to = driver.findElement(By.xpath("//input[@aria-controls='react-autowhatever-1']"));
 			to.sendKeys("chennai");
 			driver.findElement(By.xpath("//p[text()='Chennai, India']")).click();
@@ -155,8 +111,8 @@ System.out.println("start");
 			{
 				try
 				{
-					
-					driver.findElement(By.xpath("//div[@aria-label='Sat Dec 02 2023']")).click();
+					Thread.sleep(10);
+					driver.findElement(By.xpath("//div[@aria-label='Fri Dec 02 2023']")).click();
 					break;
 				}
 				catch (Exception e)

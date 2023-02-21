@@ -62,7 +62,7 @@ public class WebDriverUtility
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	/**
-	 * This method will wait until a particular element becomes clickable
+	 * This method will wait until a particular element becomes click able
 	 * @param driver
 	 * @param element
 	 */
@@ -82,7 +82,7 @@ public class WebDriverUtility
 		s.selectByIndex(index); 
 	}
 	/**
-	 * This method will handle dropdown by using value
+	 * This method will handle drop down by using value
 	 * @param element
 	 * @param value
 	 */
@@ -218,7 +218,7 @@ public class WebDriverUtility
 		driver.switchTo().alert().accept();
 	}
 	/**
-	 * This method will dismis alert popup
+	 * This method will dismiss alert pop up
 	 * @param driver
 	 */
 	public void dismisAlert(WebDriver driver)
@@ -226,7 +226,7 @@ public class WebDriverUtility
 		driver.switchTo().alert().dismiss();
 	}
 	/**
-	 * This method will get the text of alert popup and return it to the caller
+	 * This method will get the text of alert pop up and return it to the caller
 	 * @param driver
 	 * @return
 	 */
@@ -284,11 +284,11 @@ public class WebDriverUtility
 		js.executeScript("window.scrollBy(0,500)", "");
 	}
 	/**
-	 * This method will scroll downward untill the specific element found
+	 * This method will scroll downward until the specific element found
 	 * @param driver
 	 * @param element
 	 */
-	public void scroolAction(WebDriver driver , WebElement element)
+	public void scrollAction(WebDriver driver , WebElement element)
 	{
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		int x=element.getLocation().getX();

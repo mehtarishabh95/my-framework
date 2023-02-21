@@ -66,8 +66,8 @@ public class CreateNewOrgPage extends WebDriverUtility
 	public void createNewOrg(String OrgName, String industry)
 	{
 		orgNameEdt.sendKeys(OrgName);
-		handleDropDown(industryDropDown, industry);;
-		saveBtn.click();
+		handleDropDown(industryDropDown, industry);
+			saveBtn.click();
 	}
 	
 	

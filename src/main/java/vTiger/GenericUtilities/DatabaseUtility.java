@@ -1,5 +1,6 @@
 package vTiger.GenericUtilities;
 
-public class DatabaseUtility {
+public class DatabaseUtility 
+{
 
 }

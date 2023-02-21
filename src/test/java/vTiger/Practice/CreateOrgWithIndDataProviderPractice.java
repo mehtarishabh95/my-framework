@@ -69,6 +69,7 @@ public class CreateOrgWithIndDataProviderPractice extends BaseClass
 	@DataProvider(name="org")
 	public Object [][] orgwithinddata()
 	{
+		
 		Object [][] data=new Object [4][2];
 		data [0][0]="Wiprozs"+jUtil.getRandomString(5);
 		data [0][1]="Healthcare";
