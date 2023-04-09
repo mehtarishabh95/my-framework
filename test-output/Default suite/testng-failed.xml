@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vTiger.Practice.DebuggingPractice">
+      <class name="extraPractice.CreateContactTest">
         <methods>
-          <include name="debugging"/>
+          <include name="createContact"/>
         </methods>
-      </class> <!-- vTiger.Practice.DebuggingPractice -->
+      </class> <!-- extraPractice.CreateContactTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

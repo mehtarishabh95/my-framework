@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import vTiger.ObjectRepository.HomePage;
@@ -33,7 +34,9 @@ public class BaseClass
 		System.out.println("====DataBase connection successful====");
 	}
 	
+	//@Parameters("Browser")
 	//@BeforeTest
+
 	@BeforeClass(groups = {"SmokeSuite","RegressionSuite"})
 	public void bcConfig() throws IOException
 	{

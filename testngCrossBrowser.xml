@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Suite">
+<parameter name="Browser" value="Chrome"></parameter>
+  <test thread-count="2" parallel="tests" name="Test_Chrome_runner">
+    <classes>
+      <class name="vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest"/>
+      <class name="vTiger.Organizations.TestsScripts.CreateMultipleOrgTest"></class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <parameter name="Browser" value="Firefox"></parameter>
+  <test thread-count="2" parallel="tests" name="Test_Firefox_Runner">
+    <classes>
+      <class name="vTiger.Organizations.TestsScripts.CreateNewOrganizationWithIndustryTest"/>
+      <class name="vTiger.Organizations.TestsScripts.CreateMultipleOrgTest"></class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

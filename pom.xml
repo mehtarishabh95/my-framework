@@ -4,7 +4,7 @@
   <artifactId>Vtiger.WCSM23.AutomationFramework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-   <properties>
+   <properties><!--for maven compiler-->
 
     <maven.compiler.source>1.8</maven.compiler.source>
 
@@ -17,11 +17,13 @@
   <dependencies>
   <!-- this is an Automation tool -->
   <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.4.0</version>
+    <version>4.8.3</version>
 </dependency>
+
 
 
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
