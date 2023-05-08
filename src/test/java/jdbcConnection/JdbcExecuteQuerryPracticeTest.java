@@ -39,6 +39,12 @@ public class JdbcExecuteQuerryPracticeTest
 		//close the 
 		con.close();
 		System.out.println("db closed");
+		/*get the driver ref
+		 * resister the driver
+		 * get the connection
+		 * issue create statement
+		 * execute the querry
+		 * close the database*/
 		
 	}
 } 

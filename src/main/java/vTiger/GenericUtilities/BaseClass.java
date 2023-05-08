@@ -37,13 +37,13 @@ public class BaseClass
 	//@Parameters("Browser")
 	//@BeforeTest
 
-	@BeforeClass(groups = {"SmokeSuite","RegressionSuite"})
+	@BeforeClass(groups = {"SmokeSuite","RegressionSuite"})//group accepts string array
 	public void bcConfig() throws IOException
 	{
 		String BROWSER = pUtil.readDataFromPropertyFile("browser");
 		String URL = pUtil.readDataFromPropertyFile("url");
 		
-		if(BROWSER.equalsIgnoreCase("chrome"))
+		if(BROWSER.equalsIgnoreCase("chrome"))//Runtime Polymorphism
 		{
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
